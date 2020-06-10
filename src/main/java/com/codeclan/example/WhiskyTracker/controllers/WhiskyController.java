@@ -23,7 +23,8 @@ public class WhiskyController {
             @RequestParam(name = "year", required = false) Integer year,
             @RequestParam(name = "distilleryName", required = false) String distilleryName,
             @RequestParam(name = "age", required = false) Integer age,
-            @RequestParam(name = "name", required = false) String name
+            @RequestParam(name = "name", required = false) String name,
+            @RequestParam(name = "region", required = false) String region
     ) {
         if (year != null) {
             return new ResponseEntity<>(whiskyRepository.findByYear(year), HttpStatus.OK);
